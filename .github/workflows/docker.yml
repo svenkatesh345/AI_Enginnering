@@ -20,6 +20,7 @@ jobs:
       - name: Build and push image
         uses: docker/build-push-action@v4
         with:
-          context: .
+          context: ./TravelPricePredictor
+          file: ./TravelPricePredictor/Dockerfile
           push: true
           tags: ${{ secrets.DOCKER_USERNAME }}/travel-price-predictor:latest
